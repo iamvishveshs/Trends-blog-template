@@ -4,9 +4,6 @@ Certainly! Here's a README description for a GitHub repository containing the we
 
 ---
 
-# Webpage with Search Box and Popular Post Scrolling Effect
-
-This repository contains the source code for a webpage that features a dynamic search box and a popular post container with scrolling effects. The webpage is designed to enhance user experience by providing intuitive navigation and interactive content display.
 
 ## Features
 
@@ -116,7 +113,7 @@ To get started with this project:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/iamvishveshs/Trends-blog-template.git
    ```
 
 2. Open the `index.html` file in your browser to see the webpage in action.
