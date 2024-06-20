@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --theme-main-color: rgb(0, 180, 125);
+  --theme-secondary-color: rgb(105, 215, 183);
+  --inline-distance: 10rem;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+}
+
+/* Navbar Styling Starts */
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-bottom: 2px solid rgb(218, 218, 218);
+  padding: 0 10px;
+}
+.navItems {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+}
+.heading {
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: flex;
+}
+.heading .subHeading {
+  font-size: 1rem;
+  color: var(--theme-main-color);
+  margin-left: 3px;
+  font-weight: 900;
+}
+.navItems ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
+  margin-left: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.navMenu {
+  position: relative;
+}
+.navMenu::after {
+  content: "\f153";
+  font-family: uicons-regular-rounded !important;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(60%);
+}
+
+.searchContainer {
+  position: absolute;
+  top: 60px; /* Align below the navbar */
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: max-height 0.5s ease-in-out;
+  background-color: white;
+  overflow: hidden; /* Hide overflow content */
+}
+.searchContainer.active {
+  max-height: 60px; /* Adjust based on your design */
+}
+
+.searchBox {
+  display: block;
+  width: 90%;
+  padding: 15px 15px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--theme-secondary-color);
+  transition: all 0.2s ease-in-out;
+}
+.searchBox:focus {
+  border-bottom: 2px solid var(--theme-main-color);
+}
+.searchIcon:hover {
+  cursor: pointer;
+}
+.searchIcon {
+  font-weight: 600;
+}
+
+.navLoginBtn {
+  padding: 10px 30px;
+  color: white;
+  background-color: var(--theme-main-color);
+  text-align: center;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+.navLoginBtn:hover {
+  background-color: rgb(1, 161, 113);
+}
+/* Navbar Styling ends */
+
+/*Hero section Styling starts*/
+
+.heroSection {
+  margin: 0.5rem var(--inline-distance);
+}
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.mainColor {
+  color: var(--theme-main-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.heroContainer {
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.heroContainer > * {
+  height: 100%;
+}
+.heroPost {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+}
+.heroPost img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.postDetail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(3, 3, 3, 0.651);
+  padding: 2rem 3rem;
+}
+.postCategory,
+.postPublishDate {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(224, 224, 224);
+}
+.postTitle a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+.postDescription {
+  text-align: justify;
+  font-size: 0.9rem;
+  color: rgb(233, 229, 229);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hereo post ends here */
+.popularPostSection {
+  width: 40%;
+  padding: 1rem 3rem;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  transition: all 1s ease-in !important;
+}
+
+.navigationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationContainer h2 {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.navigations {
+  display: flex;
+  gap: 20px;
+}
+
+.navigations i {
+  cursor: pointer;
+  font-weight: 900;
+  border: 1px solid black;
+  padding: 4px 4px 2px 4px;
+}
+
+.popularPostContainer {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+}
+
+.popularPostDetail {
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.popularPostContainer.active {
+  height: auto;
+  opacity: 1;
+}
+
+.popularPostCategory,
+.popularPostPublishDate {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--theme-main-color);
+}
+
+.popularPostTitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.popularPostPublishDate {
+  margin-top: 20px;
+  color: #aeb0b1;
+}
+
+/* Popular posts Ends Here */
+
+/* Posts Container starts here */
+.postsContainer {
+  margin: 0.5rem var(--inline-distance);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(10% / 3);
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.postsContainer > * {
+  width: calc((90% / 3));
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.33%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  flex-grow: 1;
+}
+.postImageContainer {
+  width: 100%;
+  height: 150px;
+}
+.postImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.post .postTitle a {
+  margin: 10px 15px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post .postDetails
+{
+  margin: 10px 15px;
+  display: flex;
+  gap:10px;
+  flex-direction: row;
+}
+.post .postDetails .postPublishDate
+{
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: rgb(75, 75, 75);
+}
+.post .postDetails .postCategory
+{
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--theme-main-color);
+}
+.post .postDetails .postCategory::before,
+.post .postDetails .postPublishDate::before{
+  content: '●';
+}
