@@ -315,26 +315,23 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.post .postDetails
-{
+.post .postDetails {
   margin: 10px 15px;
   display: flex;
-  gap:10px;
+  gap: 10px;
   flex-direction: row;
 }
-.post .postDetails .postPublishDate
-{
+.post .postDetails .postPublishDate {
   font-size: 0.7rem;
   font-weight: 900;
   color: rgb(75, 75, 75);
 }
-.post .postDetails .postCategory
-{
+.post .postDetails .postCategory {
   font-size: 0.7rem;
   font-weight: 900;
   color: var(--theme-main-color);
 }
 .post .postDetails .postCategory::before,
-.post .postDetails .postPublishDate::before{
-  content: '●';
+.post .postDetails .postPublishDate::before {
+  content: "●";
 }
